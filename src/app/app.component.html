@@ -5,9 +5,10 @@
   </h1>
 </div>
 
-<detail></detail>
-<detail></detail>
-<detail></detail>
+<detail [nomPersonne]="personne.nom"></detail>
+<detail [nomPersonne]="personne.nom"></detail>
+<detail [nomPersonne]="personne.nom"></detail>
+
 <ol>
 	<li [class.selected]="p==personne" (click)="clickPersonne(p)" *ngFor="let p of liste"> {{p.prenom}} {{p.nom }} </li>
 </ol>
