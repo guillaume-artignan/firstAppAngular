@@ -18,6 +18,12 @@
 </ul>
 
 <h2>Modification</h2>
+
+<h3 *ngIf="!personne.nom">Attention le nom n'est pas défini</h3>
+<h3 *ngIf="!personne.prenom">Attention le prenom n'est pas défini</h3>
+<h3 *ngIf="personne.prenom=='Guillaume'">Tu n'as pas le droit ! change de nom</h3>
+
+
 <ul>
 	<li>Nom : <input [(ngModel)]="personne.nom" /></li>
 	<li>Prenom : <input [(ngModel)]="personne.prenom" /></li>
