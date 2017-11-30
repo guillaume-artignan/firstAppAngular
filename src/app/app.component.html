@@ -25,7 +25,11 @@
 
 
 <ul>
-	<li>Nom : <input [(ngModel)]="personne.nom" /></li>
+	<li>Nom : <input class="{{personne.nom}}"
+					 [class.erreur]="!personne.nom" 
+					 [class.info]="personne.nom=='Fernando'" 
+					 [(ngModel)]="personne.nom" /></li>
+					 
 	<li>Prenom : <input [(ngModel)]="personne.prenom" /></li>
 	<li>Travail Principal : <input [(ngModel)]="personne.travail" /></li>
 	<li>Résumé : <textarea  [(ngModel)]="personne.description" ></textarea></li>

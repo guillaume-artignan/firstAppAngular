@@ -5,3 +5,11 @@ ul {
 li{
 	margin-top : 10px;
 }
+
+.erreur{
+	background-color : indianred;
+}
+
+.info{
+	background-color : orange;
+}
