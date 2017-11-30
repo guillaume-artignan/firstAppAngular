@@ -1,5 +1,30 @@
-<p (click)="modifieNom()">
-  Le nom : {{maPersonne.nom}}
-  Salut du composant détail
-  Mon nombre aleatoire est : {{alea}}
-</p>
+<h2>Détail sur {{maPersonne.prenom}} {{maPersonne.nom}} </h2>
+<ul>
+	<li><b>Nom : </b>{{maPersonne.nom}}</li>
+	<li><b>Prenom : </b>{{maPersonne.prenom}}</li>
+	<li><b>Description : </b>{{maPersonne.description}}</li>
+	<li><b>Travail : </b>{{maPersonne.travail}}</li>
+</ul>
+
+<img width='300px' src="./assets/{{maPersonne.nom}}.jpg">
+
+
+<h2>Modification</h2>
+
+<h3 *ngIf="!maPersonne.nom">Attention le nom n'est pas défini</h3>
+<h3 *ngIf="!maPersonne.prenom">Attention le prenom n'est pas défini</h3>
+<h3 *ngIf="maPersonne.prenom=='Guillaume'">Tu n'as pas le droit ! change de nom</h3>
+
+
+<ul>
+	<li>Nom : <input class="{{maPersonne.nom}}"
+					 [class.erreur]="!maPersonne.nom" 
+					 [class.info]="maPersonne.nom=='Fernando'" 
+					 [(ngModel)]="maPersonne.nom" /></li>
+					 
+	<li>Prenom : <input [(ngModel)]="maPersonne.prenom" /></li>
+	<li>Travail Principal : <input [(ngModel)]="maPersonne.travail" /></li>
+	<li>Résumé : <textarea  [(ngModel)]="maPersonne.description" ></textarea></li>
+	
+	
+</ul>

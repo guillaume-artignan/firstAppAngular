@@ -7,16 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  alea = Math.random();
   
   @Input() maPersonne;
+  
   
   
   constructor() {}
   ngOnInit() {}
   
-  modifieNom = function(){
-	  this.maPersonne.nom+=" TOTO";
-  }
 
 }
