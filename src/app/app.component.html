@@ -6,7 +6,7 @@
 </div>
 
 <ol>
-	<li (click)="clickPersonne(p)" *ngFor="let p of liste"> {{p.prenom}} {{p.nom }} </li>
+	<li [class.selected]="p==personne" (click)="clickPersonne(p)" *ngFor="let p of liste"> {{p.prenom}} {{p.nom }} </li>
 </ol>
 
 <h2>Détail sur {{personne.prenom}} {{personne.nom}} </h2>

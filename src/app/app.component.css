@@ -13,3 +13,7 @@ li{
 .info{
 	background-color : orange;
 }
+
+.selected{
+	background-color : pink;
+}
