@@ -9,14 +9,14 @@ export class DetailComponent implements OnInit {
 
   alea = Math.random();
   
-  @Input() nomPersonne;
+  @Input() maPersonne;
   
   
   constructor() {}
   ngOnInit() {}
   
   modifieNom = function(){
-	  this.nomPersonne+=" TOTO";
+	  this.maPersonne.nom+=" TOTO";
   }
 
 }
