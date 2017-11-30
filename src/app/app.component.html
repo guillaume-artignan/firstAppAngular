@@ -3,8 +3,12 @@
   <h1>
     {{ title }}
   </h1>
-  
 </div>
+
+<ol>
+	<li *ngFor="let p of liste"> {{p.prenom}} {{p.nom }} </li>
+</ol>
+
 <h2>Détail sur {{personne.prenom}} {{personne.nom}} </h2>
 <ul>
 	<li><b>Nom : </b>{{personne.nom}}</li>
@@ -15,7 +19,7 @@
 
 <h2>Modification</h2>
 <ul>
-	<li (click)="clickEffectue()" >Nom : <input [(ngModel)]="personne.nom" /></li>
+	<li>Nom : <input [(ngModel)]="personne.nom" /></li>
 	<li>Prenom : <input [(ngModel)]="personne.prenom" /></li>
 	<li>Travail Principal : <input [(ngModel)]="personne.travail" /></li>
 	<li>Résumé : <textarea  [(ngModel)]="personne.description" ></textarea></li>
