@@ -14,5 +14,9 @@ export class DetailComponent implements OnInit {
   
   constructor() {}
   ngOnInit() {}
+  
+  modifieNom = function(){
+	  this.nomPersonne+=" TOTO";
+  }
 
 }
