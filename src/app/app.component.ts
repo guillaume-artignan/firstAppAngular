@@ -10,11 +10,19 @@ import { PersonnesService} from './personnes.service';
 export class AppComponent {
   title = 'Liste des Scientifiques';
   
-  liste;
-  personne;
+  liste = [];
+  personne = {};
   
   constructor (private personnesService : PersonnesService){
-	  this.liste = personnesService.donnePersonnes();
+	   
+	  personnesService.requetePersonnes()
+			.then(donnees => this.donneeChargee(donnees));
+	  
+  }
+  
+  donneeChargee = function(donnees){
+	  var personnes = JSON.parse(donnees._body);
+	  this.liste = personnes;
 	  this.personne = this.liste[0];
   }
 			
