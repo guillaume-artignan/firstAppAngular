@@ -22,7 +22,7 @@ import { RouterComponent } from './router/router.component'
   imports: [
     BrowserModule, FormsModule, HttpModule, 
 	RouterModule.forRoot([{ path:"accueil", component:AccueilComponent},
-						  { path:"scientifiques", component:AppComponent}])
+						  { path:"scientifiques/:nom", component:AppComponent}])
   ],
   providers: [CompteurService, PersonnesService],
   bootstrap: [RouterComponent]
