@@ -7,17 +7,24 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { DetailComponent } from './detail/detail.component';
+import { AccueilComponent } from './accueil/accueil.component';
+import { RouterModule } from '@angular/router';
+import { RouterComponent } from './router/router.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DetailComponent
+    DetailComponent,
+    AccueilComponent,
+    RouterComponent
   ],
   imports: [
-    BrowserModule, FormsModule, HttpModule
+    BrowserModule, FormsModule, HttpModule, 
+	RouterModule.forRoot([{ path:"accueil", component:AccueilComponent},
+						  { path:"scientifiques", component:AppComponent}])
   ],
   providers: [CompteurService, PersonnesService],
-  bootstrap: [AppComponent]
+  bootstrap: [RouterComponent]
 })
 export class AppModule { }
